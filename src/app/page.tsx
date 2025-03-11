@@ -23,7 +23,14 @@ export default function Home() {
           </p>
           <div className="flex gap-4  mb-6">
             <button className="text-white border border-amber-500 bg-amber-500 px-2 py-1 rounded-[4px] font-semibold min-w-[120px] flex justify-center items-center  transition duration-300  hover:bg-amber-50 hover:text-amber-500">
-              Download CV
+              <a
+                href={"/Tran-Trung-Phat-CV.pdf"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white border border-amber-500 bg-amber-500 px-2 py-1 rounded-[4px] font-semibold min-w-[120px] flex justify-center items-center  transition duration-300  hover:bg-amber-50 hover:text-amber-500"
+              >
+                Download CV
+              </a>
             </button>
             <button className="bg-black border border-black px-2 py-1 rounded-[4px] font-semibold min-w-[120px] flex justify-center items-center  transition duration-300  hover:bg-amber-50 hover:text-black">
               Contact Me
@@ -90,7 +97,14 @@ export default function Home() {
           </p>
           <div className="flex gap-4  mb-6">
             <button className="text-white border border-amber-500 bg-amber-500 px-2 py-1 rounded-[4px] font-semibold min-w-[120px] flex justify-center items-center  transition duration-300  hover:bg-amber-50 hover:text-amber-500">
-              Download CV
+              <a
+                href={"/Tran-Trung-Phat-CV.pdf"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white border border-amber-500 bg-amber-500 px-2 py-1 rounded-[4px] font-semibold min-w-[120px] flex justify-center items-center  transition duration-300  hover:bg-amber-50 hover:text-amber-500"
+              >
+                Download CV
+              </a>
             </button>
             <button className="bg-black border border-black px-2 py-1 rounded-[4px] font-semibold min-w-[120px] flex justify-center items-center  transition duration-300  hover:bg-amber-50 hover:text-black">
               Contact Me
@@ -156,9 +170,21 @@ export default function Home() {
             interfaces that elevate the digital experience.
           </p>
           <div className="flex gap-4  mb-6">
-            <button className="text-white border border-amber-500 bg-amber-500 px-2 py-1 rounded-[4px] font-semibold min-w-[120px] flex justify-center items-center  transition duration-300  hover:bg-amber-50 hover:text-amber-500">
-              Download CV
-            </button>
+            <a
+              href={"/Tran-Trung-Phat-CV.pdf"}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white border border-amber-500 bg-amber-500 px-2 py-1 rounded-[4px] font-semibold min-w-[120px] flex justify-center items-center  transition duration-300  hover:bg-amber-50 hover:text-amber-500"
+            >
+              <a
+                href={"/Tran-Trung-Phat-CV.pdf"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white border border-amber-500 bg-amber-500 px-2 py-1 rounded-[4px] font-semibold min-w-[120px] flex justify-center items-center  transition duration-300  hover:bg-amber-50 hover:text-amber-500"
+              >
+                Download CV
+              </a>
+            </a>
             <button className="bg-black border border-black px-2 py-1 rounded-[4px] font-semibold min-w-[120px] flex justify-center items-center  transition duration-300  hover:bg-amber-50 hover:text-black">
               Contact Me
             </button>
