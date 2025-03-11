@@ -21,14 +21,16 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
+
     <html lang="en">
-      <body
-        className={`${roboto.variable} antialiased `}
-      >
-        <div className="h-screen max-w-[1400px] mx-auto">
-          <Header />
-          {children}
+      <body className={`${roboto.variable} antialiased `}>
+        <div className="relative  h-screen overflow-y-auto ">
+          <div className="max-w-[1400px] mx-auto ">
+            <Header />
+            {children}
+          </div>
         </div>
       </body>
     </html>

@@ -7,11 +7,11 @@ const Header = () => {
   const pathname = usePathname();
 
   return (
-    <header className="flex justify-between items-center py-4  animate-slide-in-top">
-      <Link className="flex gap-2 font-bold cursor-pointer text-4xl" href={'/'}>
-        <h1 className="text-amber-400">Phat</h1>
+    <header className="flex justify-between items-center py-4  animate-slide-in-top sticky top-0 z-10">
+      <div className="flex gap-2 font-bold cursor-pointer text-4xl">
+        <Link className="text-amber-400"  href={'/'}>Phat</Link>
         <h1 className="text-amber-50">Tran</h1>
-      </Link>
+      </div>
       <nav className="flex gap-8 text-amber-50 font-semibold">
         {[
           { name: "Home", path: "/" },
