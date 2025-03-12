@@ -13,7 +13,7 @@ export default function Home() {
       <Home_Introduction />
       <Home_Education />
       <Home_Awards />
-      <Home_Skills />
+      {/* <Home_Skills /> */}
       <Home_Career />
       <Home_Personal_Projects />
       <Home_Contact />
