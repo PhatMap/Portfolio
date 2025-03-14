@@ -44,7 +44,7 @@ const Home_Education = () => {
         </h1>
         <h4>04/10/2020 - Currently</h4>
         <h4>Specialize: Software Technology</h4>
-        <h5>Banchelor</h5>
+        <h5>Bachelor of Technology</h5>
       </div>
     </div>
   );

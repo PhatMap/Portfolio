@@ -14,7 +14,7 @@ const Award_Card: React.FC<AwardCardProps> = ({
   link,
 }) => {
   return (
-    <div className="absolute min-w-[400px] border border-amber-400 p-4 rounded-xl">
+    <div className="w-full h-full border border-amber-400 p-4 rounded-xl">
       <h4>{date}</h4>
       <h2>{name}</h2>
       <h5>{description}</h5>
