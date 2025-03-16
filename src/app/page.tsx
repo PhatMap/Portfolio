@@ -10,13 +10,13 @@ import Home_Skills from "@/features/home/Home_Skills";
 export default function Home() {
   return (
     <div className="relative m-h-[90%] text-amber-50">
-      <Home_Introduction />
-      <Home_Education />
-      <Home_Awards />
+      {/* <Home_Introduction /> */}
+      {/* <Home_Education /> */}
+      {/* <Home_Awards /> */}
       {/* <Home_Skills /> */}
       <Home_Career />
-      <Home_Personal_Projects />
-      <Home_Contact />
+      {/* <Home_Personal_Projects /> */}
+      {/* <Home_Contact /> */}
     </div>
   );
 }
