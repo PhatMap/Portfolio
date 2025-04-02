@@ -1,0 +1,416 @@
+<style>
+  .market-utility-body-container {
+    padding-bottom: 60px;
+    background-color: #f2f4f7;
+    min-width: 100%;
+  }
+
+  .market-utility-body-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1520px;
+  }
+
+  .market-utility-body-section {
+    display: flex;
+    align-items: stretch;
+  }
+
+  .market-utility-body-left {
+    width: 100%;
+  }
+  .market-utility-body-left img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+  }
+
+  .market-utility-body-image {
+    display: block;
+    /* width: 761px;
+    height: 524px;
+    max-width: 761px;
+    max-height: 524px; */
+  }
+
+  .market-utility-body-right {
+    display: flex;
+    width: 100%;
+    algin-items: flex-start;
+  }
+
+  .market-utility-body-title {
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 700;
+    color: #0d0d0d;
+    text-align: center;
+    background-color: #f2f4f7;
+    padding-bottom: 32px;
+    padding-top: 60px;
+  }
+
+  .market-utility-body-description {
+    font-size: 16px;
+    font-weight: 400;
+    color: #0d0d0d;
+    margin-bottom: 36px;
+  }
+
+  .market-utility-body-buttons {
+    display: flex;
+    justify-content: flex-start;
+    /* background-color: #f5f5f5; */
+    border-radius: 4px;
+    position: relative;
+    width: 55%;
+    margin-bottom: 24px;
+    background-color: #e0e0e0;
+  }
+
+  .market-utility-body-button {
+    flex: 1;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    /* background-color: transparent; */
+    background-color: #e0e0e0;
+    transition: all 0.3s ease;
+    z-index: 2;
+  }
+
+  .market-utility-body-button.active {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #02448d !important;
+  }
+
+  .market-utility-body-buttons::before {
+    content: '';
+    position: absolute;
+    height: calc(100% - 10px);
+    width: 50%;
+    border-radius: 4px;
+    z-index: 1;
+    transition: all 0.3s ease;
+    top: 5px;
+    left: 5px;
+    color: #404040 !important;
+    font-weight: 600;
+  }
+
+  .market-utility-body-buttons .highlight {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 50%;
+    /* Half of the total width (2 buttons) */
+    height: calc(100% - 10px);
+    background-color: #02448d;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+    z-index: 1;
+  }
+
+  .market-utility-body-subtitle {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 600;
+    color: #0d0d0d;
+    margin-bottom: 8px;
+    text-align: left;
+  }
+
+  .market-utility-body-content {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #0d0d0d;
+    margin-bottom: 16px;
+    text-align: left;
+  }
+
+  .market-utility-body-learn-more {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #0060cc;
+    border: 1px solid #0060cc;
+    background-color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 20%;
+  }
+
+  .market-utility-body-learn-more:hover {
+    opacity: 0.8;
+  }
+
+  .market-utility-body-content-container {
+    padding: 24px 24px 0 36px;
+  }
+
+  .market-utility-body-content-contain-special {
+    padding: 24px 36px 0 24px;
+  }
+
+  /* Tablet View */
+  @media (max-width: 1180px) {
+    .market-utility-body-image {
+      width: 100%;
+      max-width: unset;
+      max-height: auto;
+    }
+
+    .market-utility-body-title {
+      padding-top: 40px;
+    }
+
+    .market-utility-body-content-container {
+      margin: 20px 0 16px 0;
+    }
+
+    .market-utility-body-container {
+      padding-bottom: 8px;
+    }
+
+    .market-utility-body-title {
+      font-size: 32px;
+      line-height: 40px;
+    }
+
+    .market-utility-body-section {
+      display: block;
+    }
+
+    .market-utility-body-wrapper {
+    }
+
+    .market-utility-body-left {
+      width: 100%;
+    }
+
+    .market-utility-body-right {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .market-utility-body-buttons {
+      width: 80%;
+    }
+
+    .market-utility-body-learn-more {
+      width: 50%;
+    }
+
+    .market-utility-body-content-container {
+      padding: 0;
+    }
+  }
+
+  /* Mobile View */
+  @media (max-width: 767px) {
+    .market-utility-body-image {
+      width: 100%;
+      max-width: unset;
+      max-height: 236px;
+    }
+
+    .market-utility-body-container {
+      padding: 0 12px 32px 12px;
+    }
+
+    .market-utility-body-wrapper {
+      padding: 0;
+    }
+
+    .market-utility-body-title {
+      font-size: 24px;
+      line-height: 30px;
+    }
+
+    .market-utility-body-content {
+      font-size: 16px;
+    }
+
+    .market-utility-body-section {
+      flex-direction: column !important;
+      align-items: center;
+      text-align: center;
+    }
+
+    .market-utility-body-left,
+    .market-utility-body-right {
+      width: 100%;
+    }
+
+    .market-utility-body-image {
+      max-width: 100%;
+    }
+
+    .market-utility-body-buttons {
+      width: 100%;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .market-utility-body-button {
+      width: 100%;
+    }
+
+    .market-utility-body-learn-more {
+      width: 100%;
+    }
+
+    .market-utility-body-content-container {
+      padding: 24px 0;
+    }
+  }
+
+  @media (max-width: 425px) {
+    .market-utility-body-content {
+      font-size: 14px;
+    }
+
+    .market-utility-body-content-container {
+      padding: 0;
+    }
+  }
+</style>
+
+<div class="market-utility-body-container container-width" id="sections-container">
+  <h2 class="market-utility-body-title">{{ section.settings.titleOne }}</h2>
+</div>
+
+{% schema %}
+{
+  "name": "Markets Utility Two",
+  "settings": [
+    {
+      "type": "text",
+      "id": "titleOne",
+      "label": "Title",
+      "default": "Wire & Cable for Power Utilities"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text_block_symmetry",
+      "name": "Text Block Symmetry",
+      "settings": [
+        { "type": "text", "id": "Id", "label": "Tab Id" },
+        { "type": "image_picker", "id": "image", "label": "Image" },
+        { "type": "text", "id": "title", "label": "Title" },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Markets Utility Two"
+    }
+  ]
+}
+{% endschema %}
+
+<script>
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const sectionsData = [];
+
+  {% for block in section.blocks %}
+    {% if block.type == 'text_block_symmetry' %}
+        sectionsData.push({
+      id: "{{ block.settings.Id }}",
+      image: "{{  block.settings.image | image_url }}",
+      buttons: [
+        {
+          label: "{{  block.settings.title }}",
+        content: `{{ block.settings.content }}`,
+        }]
+        });
+    {% endif %}
+{% endfor %}
+
+
+    const container = document.getElementById('sections-container');
+
+    sectionsData.forEach((section, index) => {
+      const backgroundColor = index % 2 === 0 ? '#F2F4F7' : '#F2F4F7';
+
+      const wrapperElement = document.createElement('div');
+      wrapperElement.className = 'market-utility-body-wrapper';
+      wrapperElement.style.backgroundColor = backgroundColor;
+
+      const mainElement = document.createElement('div');
+      mainElement.className = 'market-utility-body-main';
+
+      const sectionElement = document.createElement('div');
+      sectionElement.className = 'market-utility-body-section';
+      sectionElement.id = section.id;
+
+      const filteredContent = section.buttons[0].content
+  .replace(/<h3>/g, '<h3 class="market-utility-body-subtitle">') 
+  .replace(/<p>/g, '<p class="market-utility-body-content">');
+
+      sectionElement.innerHTML = `
+          <div class="market-utility-body-left">
+            <img src="${section.image}" alt="${section.title}" class="market-utility-body-image">
+          </div>
+          <div class="market-utility-body-right">
+            <div class="market-utility-body-content-container">
+              ${filteredContent}
+            </div>
+          </div>
+        `;
+
+      if (index % 2 !== 0) {
+        sectionElement.style.flexDirection = 'row-reverse';
+
+        sectionElement.innerHTML = `
+          <div class="market-utility-body-left">
+            <img src="${section.image}" alt="${section.title}" class="market-utility-body-image">
+          </div>
+          <div class="market-utility-body-right">
+            <div class="market-utility-body-content-container market-utility-body-content-contain-special">
+              ${filteredContent}
+            </div>
+          </div>
+        `;
+      }
+
+      wrapperElement.appendChild(mainElement);
+      wrapperElement.appendChild(sectionElement);
+
+      container.appendChild(wrapperElement);
+    });
+
+    const sections = document.querySelectorAll('.market-utility-body-section');
+
+    sections.forEach((section) => {
+      const buttons = section.querySelectorAll('.market-utility-body-button');
+      const contentContainer = section.querySelector('.market-utility-body-content-container');
+
+      buttons.forEach((button, index) => {
+        button.addEventListener('click', () => {
+          buttons.forEach((btn) => btn.classList.remove('active'));
+
+          button.classList.add('active');
+
+          const contentKey = `${section.id}-${index}`;
+          const content = sectionsData.find((s) => s.id === section.id).buttons[index].content;
+
+          contentContainer.innerHTML = content;
+        });
+      });
+    });
+  });
+</script>

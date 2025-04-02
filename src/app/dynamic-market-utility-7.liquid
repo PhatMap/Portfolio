@@ -1,0 +1,208 @@
+<div class="markets-utility-body-emergency-response-management-container">
+  <div class="markets-utility-body-emergency-response-management-content-container">
+    <div class="markets-utility-body-emergency-response-management-content">
+      <h1 class="markets-utility-body-emergency-response-management-title title-section">
+        {{ section.settings.titleOne }}
+      </h1>
+      {% if section.settings.contentOne != blank %}
+        <div>
+          {{
+            section.settings.contentOne
+            | replace: '<p>', '<article  class="markets-utility-body-emergency-response-management-subtitle">'
+            | replace: '</p>', '</article>'
+          }}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Markets Utility Six",
+  "settings": [
+    {
+      "type": "text",
+      "id": "titleOne",
+      "label": "Title",
+      "default": "Technical Resources"
+    },
+    {
+      "type": "richtext",
+      "id": "contentOne",
+      "label": "Content",
+      "default": "<p>Text Here</p>"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Markets Utility Six"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+  .markets-utility-body-emergency-response-management-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .markets-utility-body-emergency-response-management-content-container {
+    width: 100%;
+    padding: 102px 454px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('{{ "iso9001_bg.png" | asset_url }}');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .markets-utility-body-emergency-response-management-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+
+    padding: 40px 60px;
+
+    background: #003066;
+    backdrop-filter: blur(4px);
+    border-radius: 12px;
+    diplay: block;
+  }
+
+  .markets-utility-body-emergency-response-management-content h1 {
+    color: white !important;
+  }
+
+  .markets-utility-body-emergency-response-management-title {
+    margin-block-start: 0;
+    margin-block-end: 0;
+
+    text-align: center;
+    color: rgba(255, 255, 255, 1);
+    font-weight: 700;
+    line-height: 48px;
+  }
+
+  .markets-utility-body-emergency-response-management-subtitle {
+    min-width: 978px;
+
+    margin: 12px 0 0 0;
+
+    text-align: center;
+    font-size: 16px;
+    font-weight: 450;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 1);
+  }
+
+  .markets-utility-body-emergency-response-management-button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+  }
+
+  .markets-utility-body-emergency-response-management-button {
+    padding: 10px 24px;
+
+    border: 1px solid #0060cc;
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    text-decoration: none;
+  }
+
+  .learn-more-button {
+    margin-right: 12px;
+
+    background: rgba(0, 96, 204, 1);
+    color: rgba(255, 255, 255, 1);
+  }
+
+  .blog-button {
+    background: rgba(255, 255, 255, 1);
+    color: rgba(0, 96, 204, 1);
+  }
+
+  /* Tablet View */
+  @media (max-width: 1024px) {
+    .markets-utility-body-emergency-response-management-content-container {
+      padding: 32px; /* Adjust padding for tablet view */
+    }
+
+    .markets-utility-body-emergency-response-management-content {
+      padding: 20px 30px;
+    }
+
+    .markets-utility-body-emergency-response-management-title {
+      font-weight: 700;
+      max-width: 100%; /* Remove the max-width restriction for title */
+    }
+
+    .markets-utility-body-emergency-response-management-subtitle {
+      font-size: 16px;
+      min-width: 100%; /* Allow subtitle to take full width */
+    }
+  }
+
+  /* Mobile View */
+  @media (max-width: 767px) {
+    .markets-utility-body-emergency-response-management-content-container {
+      padding: 32px 12px; /* Adjust padding for mobile view */
+    }
+
+    .markets-utility-body-emergency-response-management-content {
+      padding: 15px;
+      width: 100%; /* Make content full width on mobile */
+    }
+
+    .markets-utility-body-emergency-response-management-title {
+      font-weight: 700;
+      max-width: 100%; /* Title full width */
+    }
+
+    .markets-utility-body-emergency-response-management-subtitle {
+      font-size: 16px;
+      min-width: 100%; /* Full width for subtitle */
+    }
+
+    .markets-utility-body-emergency-response-management-button-container {
+      flex-direction: column; /* Stack buttons vertically on mobile */
+      align-items: center;
+    }
+
+    .markets-utility-body-emergency-response-management-button {
+      width: 100%; /* Make buttons full width on mobile */
+      margin-bottom: 10px; /* Add spacing between buttons */
+    }
+
+    .learn-more-button {
+      margin-right: 0; /* Remove right margin on mobile */
+    }
+
+    .blog-button {
+      margin-top: 10px; /* Add margin for separation */
+    }
+  }
+
+  @media (max-width: 425px) {
+    .markets-utility-body-emergency-response-management-subtitle {
+      font-size: 14px;
+    }
+  }
+</style>

@@ -1,0 +1,459 @@
+<style>
+  .markets-utility-body-types-container-bg {
+    padding: 60px 0;
+    background-color: #f2f4f7;
+  }
+
+  .markets-utility-body-types-container {
+    max-width: 1520px;
+    margin: 0 auto;
+  }
+
+  .markets-utility-body-types-wrapper {
+    width: 100%;
+  }
+
+  .markets-utility-body-types-section {
+    display: flex;
+    gap: 36px;
+    align-items: center;
+  }
+
+  .markets-utility-body-types-left {
+    /* flex: 1; */
+  }
+
+  .markets-utility-body-types-image {
+    width: 100%;
+    max-width: 748px;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .markets-utility-body-types-right {
+    flex: 1;
+    display: flex;
+    align-self: flex-start;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .markets-utility-body-types-title {
+    line-height: 48px;
+    font-weight: 700;
+    color: #0d0d0d;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  .markets-utility-body-types-description {
+    font-size: 16px;
+    font-weight: 400;
+    color: #0d0d0d;
+    margin-bottom: 36px;
+  }
+
+  .markets-utility-body-types-buttons {
+    display: flex;
+    justify-content: flex-start;
+    /* background-color: #f5f5f5; */
+    border-radius: 4px;
+    position: relative;
+    height: fit-content;
+    margin-bottom: 36px;
+    background-color: #e0e0e0;
+    box-shadow: 0px 5px 20px 0px #0404151a;
+    gap: 2px;
+    padding: 2px;
+  }
+
+  .markets-utility-body-types-button {
+    height: fit-content;
+    flex: 1;
+    text-align: center;
+    padding: 8px 58px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    /* background-color: transparent; */
+    background-color: #e0e0e0;
+    transition: all 0.3s ease;
+    z-index: 2;
+    color: #404040;
+    white-space: nowrap;
+    max-width: 222px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .markets-utility-body-types-button.active {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #2c70b9 !important;
+  }
+
+  .markets-utility-body-types-buttons::before {
+    content: '';
+    position: absolute;
+    height: calc(100% - 10px);
+    width: 50%;
+    border-radius: 4px;
+    z-index: 1;
+    transition: all 0.3s ease;
+    top: 5px;
+    left: 5px;
+    color: #404040 !important;
+    font-weight: 600;
+  }
+
+  .markets-utility-body-types-buttons .highlight {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 50%;
+    /* Half of the total width (2 buttons) */
+    height: calc(100% - 10px);
+    background-color: #2c70b9;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+    z-index: 1;
+  }
+
+  .markets-utility-body-types-subtitle {
+    font-size: 20px;
+    font-weight: 600;
+    color: #0d0d0d;
+    margin-bottom: 12px;
+    margin-top: 16px;
+  }
+
+  .markets-utility-body-types-content {
+    font-size: 16px;
+    font-weight: 400;
+    color: #0d0d0d;
+    margin-bottom: 16px;
+  }
+
+  .markets-utility-body-types-content-1 {
+    font-size: 16px;
+    font-weight: 400;
+    color: #0d0d0d;
+    margin-bottom: 12px;
+  }
+
+  .markets-utility-body-types-learn-more {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #0060cc;
+    border: 1px solid #0060cc;
+    background-color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 20%;
+  }
+
+  .markets-utility-body-types-learn-more:hover {
+    opacity: 0.8;
+  }
+
+  .markets-utility-body-types-right ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    color: #3781c3;
+    list-style: disc;
+    padding-left: 2.5rem;
+  }
+
+  .markets-utility-body-types-right li a {
+    color: #3781c3;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+  }
+
+  .markets-utility-body-types-right li a:hover {
+    text-decoration: underline;
+  }
+
+  /* Tablet (max-width: 1024px) */
+  @media (max-width: 1024px) {
+    .markets-utility-body-types-wrapper {
+    }
+
+    .markets-utility-body-types-section {
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .markets-utility-body-types-left {
+      width: 100%;
+    }
+
+    .markets-utility-body-types-right {
+      width: 100%;
+    }
+
+    .markets-utility-body-types-title {
+    }
+
+    .markets-utility-body-types-description {
+      font-size: 14px;
+    }
+
+    .markets-utility-body-types-buttons {
+      width: auto;
+      justify-content: center;
+      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .markets-utility-body-types-button {
+      font-size: 12px;
+      padding: 8px 15px;
+    }
+
+    .markets-utility-body-types-image {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .markets-utility-body-types-learn-more {
+      width: 30%;
+    }
+  }
+
+  /* Mobile (max-width: 768px) */
+  @media (max-width: 768px) {
+    .markets-utility-body-types-container-bg {
+      padding: 30px 0;
+    }
+    .markets-utility-body-types-wrapper {
+      padding: 32px 12px;
+    }
+
+    .markets-utility-body-types-section {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .markets-utility-body-types-left {
+      width: 100%;
+    }
+
+    .markets-utility-body-types-right {
+      width: 100%;
+    }
+
+    .markets-utility-body-types-title {
+      line-height: 30px;
+    }
+
+    .markets-utility-body-types-description {
+      font-size: 14px;
+    }
+
+    .markets-utility-body-types-buttons {
+      width: 100%;
+      justify-content: center;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .markets-utility-body-types-button {
+      font-size: 12px;
+      padding: 8px 15px;
+    }
+
+    .markets-utility-body-types-image {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .markets-utility-body-types-learn-more {
+      width: 50%;
+    }
+    .markets-utility-body-types-button {
+      max-width: none;
+      height: auto;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: block;
+      padding: 8px 4px;
+    }
+  }
+
+  @media (max-width: 425px) {
+    .markets-utility-body-types-content {
+      font-size: 14px;
+    }
+
+    .markets-utility-body-types-button {
+      font-size: 12px;
+    }
+
+    .markets-utility-body-types-wrapper {
+      padding: 0;
+    }
+
+    .markets-utility-body-types-content-1 {
+      font-size: 14px;
+    }
+  }
+</style>
+
+<div class="markets-utility-body-types-container-bg">
+  <div class="markets-utility-body-types-container container-width" id="markets-utility-body-types"></div>
+</div>
+
+{% schema %}
+{
+  "name": "Markets Utility Four",
+  "settings": [
+    { "type": "text", "id": "Id", "label": "Tab Id" },
+    {
+      "type": "text",
+      "id": "titleOne",
+      "label": "Title",
+      "default": "Wire & Cable for Power Utilities"
+    },
+    { "type": "image_picker", "id": "image", "label": "Image" }
+  ],
+  "blocks": [
+    {
+      "type": "text_block_symmetry",
+      "name": "Text Block Symmetry",
+      "settings": [
+        { "type": "text", "id": "label", "label": "Label" },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Markets Utility Four"
+    }
+  ]
+}
+{% endschema %}
+
+<script>
+  // JSON Data for Sections
+  const marketsTypesData = [
+    {
+      id: "{{ section.settings.Id }}",
+      title: "{{ section.settings.title }}",
+      image: "{{  section.settings.image | image_url }}",
+      buttons: [],
+    }
+  ];
+
+  
+  {% for block in section.blocks %}
+    {% if block.type == 'text_block_symmetry' %}
+    marketsTypesData[0].buttons.push({
+          label: "{{  block.settings.label }}",
+          content: `{{ block.settings.content }}`,
+        });
+    {% endif %}
+{% endfor %}
+
+
+  // Render Sections from JSON
+  document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('markets-utility-body-types');
+
+    // Render each section
+    marketsTypesData.forEach((section, index) => {
+      const backgroundColor = index % 2 === 0 ? '#F2F4F7' : '#fff';
+
+      // Tạo một div bọc toàn bộ section
+      const wrapperElement = document.createElement('div');
+      wrapperElement.className = 'markets-utility-body-types-wrapper';
+      wrapperElement.style.backgroundColor = backgroundColor;
+
+      const mainElement = document.createElement('div');
+      mainElement.className = 'markets-utility-body-types-main';
+      mainElement.innerHTML = `
+          <h2 class="markets-utility-body-types-title title-section">${section.title}</h2>
+          <div style="display: flex; justify-content: center;">
+            <div class="markets-utility-body-types-buttons">
+              ${section.buttons
+                .map(
+                  (button, index) =>
+                    `<button class="markets-utility-body-types-button ${index === 0 ? 'active' : ''}" data-content="${
+                      section.id
+                    }-${index}">${button.label}</button>`
+                )
+                .join('')}
+            </div>
+          </div>
+        `;
+
+      const sectionElement = document.createElement('div');
+      sectionElement.className = 'markets-utility-body-types-section';
+      sectionElement.id = section.id;
+
+      if (index % 2 !== 0) {
+        sectionElement.style.flexDirection = 'row-reverse';
+      }
+
+      
+      const marketsTypesDatafilteredContent = section.buttons[index].content
+  .replace(/<h3>/g, '<h3 class="markets-utility-body-types-subtitle">') 
+  .replace(/<p>/g, '<p class="markets-utility-body-types-content">');
+
+      sectionElement.innerHTML = `
+          <div class="markets-utility-body-types-left">
+            <img src="${section.image}" alt="${section.title}" class="markets-utility-body-types-image">
+          </div>
+          <div class="markets-utility-body-types-right">
+            <div class="markets-utility-body-types-content-container">
+              ${marketsTypesDatafilteredContent} 
+            </div>
+          </div>
+        `;
+
+      wrapperElement.appendChild(mainElement);
+      wrapperElement.appendChild(sectionElement);
+
+      container.appendChild(wrapperElement);
+    });
+
+    const sections = document.querySelectorAll('.markets-utility-body-types-section');
+
+    sections.forEach((section) => {
+      const buttons = section
+        .closest('.markets-utility-body-types-wrapper')
+        .querySelectorAll('.markets-utility-body-types-button');
+      const contentContainer = section.querySelector('.markets-utility-body-types-content-container');
+
+      buttons.forEach((button, index) => {
+        button.addEventListener('click', () => {
+          buttons.forEach((btn) => btn.classList.remove('active'));
+
+          button.classList.add('active');
+
+          const contentKey = `${section.id}-${index}`;
+          const content = marketsTypesData.find((s) => s.id === section.id).buttons[index].content;
+          const marketsTypesDatafilteredContent = content
+          .replace(/<h3>/g, '<h3 class="markets-utility-body-types-subtitle">') 
+          .replace(/<p>/g, '<p class="markets-utility-body-types-content">');
+          contentContainer.innerHTML = marketsTypesDatafilteredContent;
+        });
+      });
+    });
+  });
+</script>

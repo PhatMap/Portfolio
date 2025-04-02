@@ -1,0 +1,308 @@
+<div class="markets-utility-body-technical-resources-container-bg">
+  <div class="markets-utility-body-technical-resources-container container-width">
+    <div class="markets-utility-body-technical-resources-content">
+      <h1 class="title-section">{{ section.settings.titleOne }}</h1>
+      <div style="margin-bottom: 36px;">
+        {% if section.settings.contentEight != blank %}
+          {{ section.settings.contentEight }}
+        {% endif %}
+        <div>
+          <div class="markets-utility-body-technical-resources-two-columns">
+            <div class="markets-utility-body-technical-resources-column" style="margin-right:100px;">
+              {% for block in section.blocks %}
+                {% if block.type == 'liOne' %}
+                  <div class="markets-utility-body-technical-resources-row">
+                    <img src="{{ block.settings.image | image_url  }}" alt="empty" width="24" height="24">
+                    <p>{{ block.settings.title }}</p>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+          <a href="/ {{ section.settings.button_link }}">
+            <button class="markets-utility-body-technical-resources-learnMoreBtn">
+              {{ section.settings.button_text }}
+            </button>
+          </a>
+        </div>
+        <div class="markets-utility-body-technical-resources-images">
+          {% for block in section.blocks %}
+            {% if block.type == 'image_block' %}
+              <img
+                src="{{ block.settings.image | image_url  }}"
+                alt="empty"
+                width="364"
+                height="280"
+              >
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+    {% schema %}
+{
+  "name": "Markets Utility Five",
+  "settings": [
+    {
+      "type": "text",
+      "id": "titleOne",
+      "label": "Title",
+      "default": "Technical Resources"
+    },
+    {
+      "type": "richtext",
+      "id": "contentEight",
+      "label": "Content",
+      "default": "<p>Text Here</p>"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Learn More"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "liOne",
+      "name": "List Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Icon Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "List Item Title",
+          "default": "List Item Here"
+        }
+      ]
+    },
+    {
+      "type": "image_block",
+      "name": "Image Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Markets Utility Five",
+      "category": "Utilities",
+      "settings": {},
+      "blocks": [
+        {
+          "type": "liOne"
+        },
+        {
+          "type": "image_block"
+        }
+      ]
+    }
+  ]
+}
+    {% endschema %}
+
+    <style>
+      .markets-utility-body-technical-resources-learnMoreBtn:hover {
+        cursor: pointer;
+        background-color: #0056a0 !important;
+        color: #fff;
+      }
+
+      .markets-utility-body-technical-resources-container-bg {
+        background-color: #2c70b9;
+        width: 100%;
+        padding: 60px 0;
+      }
+
+      .markets-utility-body-technical-resources-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        /* padding: 60px 157px 60px 144px; */
+        max-width: 1520px;
+        margin: 0 auto;
+      }
+
+      .markets-utility-body-technical-resources-content {
+        display: flex;
+        flex-direction: column;
+        /* margin-right: 192px; */
+      }
+
+      .markets-utility-body-technical-resources-content p {
+        color: #ffffff;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      .markets-utility-body-technical-resources-content h1 {
+        color: #ffffff !important;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 12px;
+      }
+
+      .markets-utility-body-technical-resources-content button {
+        padding: 10px 24px;
+        border-radius: 10px;
+        background-color: #ffffff;
+        color: #3781c3;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        width: fit-content;
+        height: fit-content;
+        border: none;
+      }
+
+      .markets-utility-body-technical-resources-two-columns {
+        display: flex;
+        margin-bottom: 36px;
+      }
+
+      .markets-utility-body-technical-resources-column {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .markets-utility-body-technical-resources-row {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .markets-utility-body-technical-resources-row p {
+        white-space: nowrap;
+      }
+
+      .markets-utility-body-technical-resources-images {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: end;
+        gap: 20px;
+      }
+
+      .markets-utility-body-technical-resources-images img {
+        width: 100%;
+        height: auto;
+        max-width: 364px;
+        max-height: 280px;
+        border-radius: 4px;
+        over-flow: hidden;
+      }
+
+      .markets-utility-body-technical-resources-images > * {
+        flex: 1 1 10%;
+      }
+      @media (max-width: 1600px) {
+        .markets-utility-body-technical-resources-images {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .markets-utility-body-technical-resources-content {
+          margin-right: 0;
+        }
+      }
+
+      @media (max-width: 1180px) {
+        .markets-utility-body-technical-resources-container {
+          padding: 32px;
+          flex-direction: column;
+        }
+
+        .markets-utility-body-technical-resources-content {
+          margin-right: 0;
+          margin-bottom: 24px;
+        }
+
+        .markets-utility-body-technical-resources-container {
+          align-items: center;
+        }
+      }
+
+      /* Mobile View */
+      @media (max-width: 768px) {
+        .markets-utility-body-technical-resources-container {
+          align-items: center;
+        }
+
+        .markets-utility-body-technical-resources-container {
+          padding: 32px 12px;
+        }
+
+        .markets-utility-body-technical-resources-content h1 {
+          /* Smaller font size for mobile */
+          text-align: left;
+        }
+
+        .markets-utility-body-technical-resources-content p {
+          font-size: 16px;
+          max-width: 100%;
+          text-align: left;
+        }
+
+        .markets-utility-body-technical-resources-two-columns {
+          flex-direction: column;
+          gap: 16px;
+        }
+
+        .markets-utility-body-technical-resources-column {
+          width: 100%;
+          gap: 10px;
+        }
+
+        .markets-utility-body-technical-resources-images {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .markets-utility-body-technical-resources-images img {
+          width: 100%;
+          /* Ensure images are full width on mobile */
+        }
+
+        .markets-utility-body-technical-resources-row {
+          flex-direction: row;
+          justify-content: flex-start;
+        }
+
+        .markets-utility-body-technical-resources-images {
+          gap: 10px;
+        }
+      }
+
+      @media (max-width: 425px) {
+        .markets-utility-body-technical-resources-content p {
+          font-size: 14px;
+        }
+
+        .markets-utility-body-technical-resources-content button {
+          font-size: 14px;
+        }
+
+        .markets-utility-body-technical-resources-images {
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+    </style>
+  </div>
+</div>
