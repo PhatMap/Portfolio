@@ -1,0 +1,219 @@
+<div class="markets-renewable-energy-category-wind-container-bg container-width">
+  <div class="markets-renewable-energy-category-wind-container" id="markets-renewable-energy-category-wind-container">
+    <!-- content -->
+  </div>
+  <div class="markets-renewable-energy-category-wind-content">
+    {% if section.settings.contentOne != blank %}
+      {{ section.settings.contentOne }}
+    {% endif %}
+  </div>
+</div>
+
+<style>
+  .markets-renewable-energy-category-wind-container-bg {
+    width: 100%;
+    padding: 40px 0 0 0;
+    background: white;
+  }
+  .markets-renewable-energy-category-wind-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    max-width: 1520px;
+    margin: 0 auto 32px;
+  }
+
+  .markets-renewable-energy-category-wind-container p {
+    color: #0d0d0d;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    background-color: #f2f4f7;
+    margin-top: 16px;
+    padding: 12px 9px;
+    height: 76px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 825px;
+  }
+
+  .markets-renewable-energy-category-wind-item {
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .markets-renewable-energy-category-wind-content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 16px;
+    color: #0d0d0d;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .markets-renewable-energy-category-wind-content p {
+    max-width: 756px;
+  }
+
+  /* Tablet (max-width: 1024px) */
+  @media (max-width: 1024px) {
+    .markets-renewable-energy-category-wind-container {
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 40px;
+      gap: 16px;
+    }
+
+    .markets-renewable-energy-category-wind-item {
+      width: calc(50% - 10px); /* Two items per row */
+    }
+
+    .markets-renewable-energy-category-wind-item img {
+      width: 140px;
+      height: 170px;
+    }
+
+    .markets-renewable-energy-category-wind-content {
+      padding: 0 32px;
+    }
+  }
+
+  /* Mobile (max-width: 768px) */
+  @media (max-width: 768px) {
+    .markets-renewable-energy-category-wind-content {
+      margin-bottom: 32px;
+    }
+    .markets-renewable-energy-category-wind-container {
+      align-items: center;
+      padding: 32px 12px;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .markets-renewable-energy-category-wind-item {
+      text-align: center;
+      width: calc(33.33% - 20px);
+      box-sizing: border-box;
+    }
+    .markets-renewable-energy-category-wind-item p {
+      font-size: 16px;
+    }
+
+    .markets-renewable-energy-category-wind-item img {
+      width: 120px;
+      height: 150px;
+    }
+
+    .markets-renewable-energy-category-wind-content {
+      font-size: 14px;
+      line-height: 22px;
+      padding: 0 32px;
+    }
+
+    .markets-renewable-energy-category-wind-content p {
+      max-width: 100%;
+    }
+
+    .markets-renewable-energy-category-wind-content {
+      padding: 0 12px;
+    }
+  }
+
+  @media (max-width: 425px) {
+    .markets-renewable-energy-category-wind-container {
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .markets-renewable-energy-category-wind-item {
+      width: calc(50% - 16px);
+      box-sizing: border-box;
+    }
+    .markets-renewable-energy-category-wind-item p {
+      font-size: 14px;
+    }
+  }
+</style>
+{% schema %}
+{
+  "name": "Markets Renewable Five",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "contentOne",
+      "label": "Content"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text_block",
+      "name": "Text Block",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Title" },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ],
+      "limit": 6
+    }
+  ],
+  "presets": [
+    {
+      "name": "Markets Renewable Five"
+    }
+  ]
+}
+{% endschema %}
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const marketsRenewableEnergyWindCategories = [];
+
+    {% for block in section.blocks %}
+    {% if block.type == 'text_block' %}
+    marketsRenewableEnergyWindCategories.push({
+          title: "{{  block.settings.title }}",
+          image: `{{ block.settings.image | image_url  }}`,
+        });
+    {% endif %}
+{% endfor %}
+
+    const contentContainer = document.getElementById('markets-renewable-energy-category-wind-container');
+
+    marketsRenewableEnergyWindCategories.forEach(item => {
+
+      const div = document.createElement('div');
+      div.classList.add('markets-renewable-energy-category-wind-item');  // Add class for styling
+
+
+      const img = document.createElement('img');
+        img.src = item.image;
+      img.alt = item.title;
+      img.width = 161;
+      img.height = 195;
+
+      const p = document.createElement('p');
+      p.textContent = item.title;
+
+      div.appendChild(img);
+      div.appendChild(p);
+
+      contentContainer.appendChild(div);
+    });
+  });
+</script>

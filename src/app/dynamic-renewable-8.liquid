@@ -1,0 +1,372 @@
+<style>
+  .markets-renewable-energy-tabs-wind-body-container-bg {
+    width: 100%;
+    padding: 60px 0;
+    background: #F2F4F7;
+  }
+
+  .markets-renewable-energy-tabs-wind-body-container {
+    /* max-width: 1611px;
+  margin: 0 auto;
+  padding: 40px 0;; */
+  }
+
+  .markets-renewable-energy-tabs-wind-body-wrapper {
+    margin: 0 auto;
+    max-width: 1520px;
+  }
+
+  .markets-renewable-energy-tabs-wind-body-section {
+    display: flex;
+    gap: 36px;
+    align-items: center;
+  }
+
+  .markets-renewable-energy-tabs-wind-body-left {
+    /* flex: 1; */
+  }
+
+  .markets-renewable-energy-tabs-wind-body-image {
+    width: 100%;
+    object-fit: cover;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .markets-renewable-energy-tabs-wind-body-right {
+    flex: 1;
+    display: flex;
+    align-self: flex-start;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .markets-renewable-energy-tabs-wind-body-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0D0D0D;
+    margin-bottom: 16px;
+  }
+
+  .markets-renewable-energy-tabs-wind-body-description {
+    font-size: 16px;
+    font-weight: 400;
+    color: #0D0D0D;
+    margin-bottom: 36px;
+  }
+
+  .markets-renewable-energy-tabs-wind-body-buttons {
+    display: flex;
+    justify-content: flex-start;
+    /* background-color: #f5f5f5; */
+    border-radius: 4px;
+    position: relative;
+    margin-bottom: 36px;
+    background-color: #e0e0e0;
+  }
+
+  .markets-renewable-energy-tabs-wind-body-button {
+    flex: 1;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    /* background-color: transparent; */
+    background-color: #e0e0e0;
+    transition: all 0.3s ease;
+    z-index: 2;
+    white-space: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .markets-renewable-energy-tabs-wind-body-button.active {
+    color: #ffffff;
+    font-weight: 600;
+    background-color: #2C70B9 !important;
+  }
+
+  .markets-renewable-energy-tabs-wind-body-buttons::before {
+    content: '';
+    position: absolute;
+    height: calc(100% - 10px);
+    width: 50%;
+    border-radius: 4px;
+    z-index: 1;
+    transition: all 0.3s ease;
+    top: 5px;
+    left: 5px;
+    color: #404040 !important;
+    font-weight: 600;
+  }
+
+  .markets-renewable-energy-tabs-wind-body-buttons .highlight {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 50%;
+    /* Half of the total width (2 buttons) */
+    height: calc(100% - 10px);
+    background-color: #2C70B9;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+    z-index: 1;
+    padding: 2px;
+  }
+
+  .markets-renewable-energy-tabs-wind-body-subtitle {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 600;
+    color: #0D0D0D;
+    margin-bottom: 12px;
+  }
+
+  .markets-renewable-energy-tabs-wind-body-content {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #0D0D0D;
+    margin-bottom: 20px;
+  }
+
+  .markets-renewable-energy-tabs-wind-body-learn-more {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #0060CC;
+    border: 1px solid #0060CC;
+    background-color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 20%;
+  }
+
+  .markets-renewable-energy-tabs-wind-body-learn-more:hover {
+    opacity: 0.8;
+  }
+
+  .markets-renewable-energy-tabs-body-title {
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 700;
+    color: #0D0D0D;
+    margin-bottom: 16px;
+  }
+
+  /* Tablet (max-width: 1024px) */
+  @media (max-width: 1180px) {
+    .markets-renewable-energy-tabs-body-title {
+      white-space: unset;
+    }
+
+    .markets-renewable-energy-tabs-wind-body-wrapper {
+   
+    }
+
+    .markets-renewable-energy-tabs-wind-body-section {
+      flex-direction: column;
+      gap: 24px;
+      align-items: center;
+      text-align: center;
+    }
+
+    .markets-renewable-energy-tabs-wind-body-left,
+    .markets-renewable-energy-tabs-wind-body-right {
+      width: 100%;
+    }
+
+    .markets-renewable-energy-tabs-wind-body-image {
+      max-width: none;
+      height: auto;
+    }
+
+    .markets-renewable-energy-tabs-wind-body-buttons {
+      width: 100%;
+    }
+  }
+
+  /* Mobile (max-width: 768px) */
+  @media (max-width: 767px) {
+    .markets-renewable-energy-tabs-wind-body-wrapper {
+     
+    }
+
+    .markets-renewable-energy-tabs-body-title {
+      font-size: 24px;
+      line-height: 32px;
+      margin-bottom: 12px;
+      white-space: normal;
+    }
+
+    .markets-renewable-energy-tabs-wind-body-buttons {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .markets-renewable-energy-tabs-wind-body-button {
+      width: 100%;
+      font-size: 14px;
+      padding: 8px;
+    }
+
+    .markets-renewable-energy-tabs-wind-body-learn-more {
+      width: 100%;
+      font-size: 14px;
+      padding: 8px;
+    }
+
+    .markets-renewable-energy-tabs-wind-body-content {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+
+  @media (max-width: 425px) {
+    .markets-renewable-energy-tabs-wind-body-buttons {
+      flex-direction: row;
+    
+    }
+
+    .markets-renewable-energy-tabs-wind-body-button {
+      white-space: unset;
+    }
+  }
+</style>
+
+<div class="markets-renewable-energy-tabs-wind-body-container-bg">
+  <div class="markets-renewable-energy-tabs-wind-body-container" id="markets-renewable-energy-tabs-wind-container">
+  </div>
+</div>
+
+<script>
+  // JSON Data for Sections
+  const windData = [
+    {
+      id: "Grounding-Static-Wire",
+      intro: "Wind Turbine Construction Materials: Wire & Cable",
+      image: "{{ 'm-tab-4.png' | asset_url }}",
+      buttons: [
+        {
+          label: "What are Wind Farm Cables?",
+          content: `
+<h3 class="markets-renewable-energy-tabs-wind-body-subtitle">What are Wind Farm Cables?</h3>
+<p class="markets-renewable-energy-tabs-wind-body-content">
+Wind farm cables are the conductors used within wind farms, as well as those used to connect large-scale wind power to the electrical grid.
+</p>
+`
+        },
+        {
+          label: "Types of Wind Farm Cables",
+          content: `
+<h3 class="markets-renewable-energy-tabs-wind-body-subtitle">Types of Wind Farm Cables?</h3>
+<p class="markets-renewable-energy-tabs-wind-body-content">
+Types of Wind Farm Cables essential components used in transmission lines for lightning protection and grounding.
+</p>
+`
+        },
+        {
+          label: "Selection Considerations",
+          content: `
+<h3 class="markets-renewable-energy-tabs-wind-body-subtitle">Selection Considerations?</h3>
+<p class="markets-renewable-energy-tabs-wind-body-content">
+Selection Considerations essential components used in transmission lines for lightning protection and grounding.
+</p>
+`
+        }
+      ]
+    },
+
+  ];
+
+  // Render Sections from JSON
+  document.addEventListener("DOMContentLoaded", () => {
+    const container = document.getElementById("markets-renewable-energy-tabs-wind-container");
+
+    // Render each section
+    windData.forEach((section, index) => {
+      const backgroundColor = index % 2 === 0 ? "#F2F4F7" : "#fff";
+
+      // Tạo một div bọc toàn bộ section
+      const wrapperElement = document.createElement("div");
+      wrapperElement.className = "markets-renewable-energy-tabs-wind-body-wrapper";
+      wrapperElement.style.backgroundColor = backgroundColor;
+
+      const mainElement = document.createElement("div");
+      mainElement.className = "markets-renewable-energy-tabs-wind-body-main";
+      mainElement.innerHTML = `
+
+`;
+
+
+      const sectionElement = document.createElement("div");
+      sectionElement.className = "markets-renewable-energy-tabs-wind-body-section container-width";
+      sectionElement.id = section.id;
+
+      // check index to convert attribute of class
+      if (index % 2 !== 0) {
+        sectionElement.style.flexDirection = "row-reverse";
+      }
+
+      sectionElement.innerHTML = `
+<div class="markets-renewable-energy-tabs-wind-body-left">
+<img src="${section.image}" alt="${section.title}" class="markets-renewable-energy-tabs-wind-body-image">
+</div>
+<div class="markets-renewable-energy-tabs-wind-body-right">
+<h2 class="markets-renewable-energy-tabs-body-title title-section">${section.intro}</h2>
+<div class="markets-renewable-energy-tabs-wind-body-buttons">
+${section.buttons
+          .map(
+            (button, index) =>
+              `<button class="markets-renewable-energy-tabs-wind-body-button ${index === 0 ? "active" : ""
+              }" data-content="${section.id}-${index}">${button.label}</button>`
+          )
+          .join("")}
+</div>
+<div class="markets-renewable-energy-tabs-wind-body-content-container">
+${section.buttons[0].content} <!-- Default content -->
+</div>
+</div>
+`;
+
+      wrapperElement.appendChild(mainElement);
+      wrapperElement.appendChild(sectionElement);
+
+      // Thêm wrapper vào container chính
+      container.appendChild(wrapperElement);
+    });
+
+    // Add click listeners to buttons
+    const sections = document.querySelectorAll(".markets-renewable-energy-tabs-wind-body-section container-width");
+
+    sections.forEach((section) => {
+      const buttons = section.querySelectorAll(".markets-renewable-energy-tabs-wind-body-button");
+      const contentContainer = section.querySelector(
+        ".markets-renewable-energy-tabs-wind-body-content-container"
+      );
+
+      buttons.forEach((button, index) => {
+        button.addEventListener("click", () => {
+          // Remove active class from all buttons in the section
+          buttons.forEach((btn) => btn.classList.remove("active"));
+
+          // Add active class to clicked button
+          button.classList.add("active");
+
+          // Update content
+          const contentKey = `${section.id}-${index}`;
+          const content = windData
+            .find((s) => s.id === section.id)
+            .buttons[index].content;
+
+          contentContainer.innerHTML = content;
+        });
+      });
+    });
+  });
+</script>

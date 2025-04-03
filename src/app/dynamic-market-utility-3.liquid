@@ -136,7 +136,7 @@
 
     const heading = document.createElement('h1');
     heading.className = 'title-section';
-    heading.textContent = 'Utility Wire & Cable';
+    heading.textContent = "{{ section.settings.titleOne }}";
     contentContainer.appendChild(heading);
 
     {% if section.settings.contentOne != blank %}

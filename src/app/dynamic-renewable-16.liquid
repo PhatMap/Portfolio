@@ -1,0 +1,120 @@
+<div class="markets-renewable-energy-proud-members-container">
+  <h1>{{ section.settings.titleOne }}</h1>
+  <div class="markets-renewable-energy-proud-members-images-list">
+    {% for block in section.blocks %}
+      {% if block.type == 'image_block' %}
+        <img
+          src="{{ block.settings.image | image_url  }}"
+          alt="empty"
+          width="110"
+          height="110"
+        >
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Markets Renewable Sevten",
+  "settings": [
+    {
+      "type": "text",
+      "id": "titleOne",
+      "label": "Title 1",
+      "default": "At AWG, our services can be broken down into four categories:"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image_block",
+      "name": "Image Block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ],
+      "limit": 5
+    }
+  ],
+  "presets": [
+    {
+      "name": "Markets Renewable Sevten"
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+  .markets-renewable-energy-proud-members-container {
+    padding: 100px 157px 100px 144px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 44px;
+    background-color: white;
+  }
+
+  .markets-renewable-energy-proud-members-container h1 {
+    color: #0d0d0d;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+  }
+
+  .markets-renewable-energy-proud-members-images-list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  /* Responsive Styles for Tablet and Mobile */
+
+  /* Tablet (max-width: 1024px) */
+  @media (max-width: 1180px) {
+    .markets-renewable-energy-proud-members-container {
+      padding: 32px; /* Adjusted padding for tablet */
+    }
+
+    .markets-renewable-energy-proud-members-container h1 {
+      font-size: 28px;
+    }
+
+    .markets-renewable-energy-proud-members-images-list {
+      justify-content: space-around !important; /* Adjust space between images */
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .markets-renewable-energy-proud-members-images-list img {
+      width: 150px; /* Adjust image size for tablets */
+      height: auto;
+    }
+  }
+
+  /* Mobile (max-width: 768px) */
+  @media (max-width: 767px) {
+    .markets-renewable-energy-proud-members-container {
+      padding: 32px 12px; /* Adjust padding for mobile */
+    }
+
+    .markets-renewable-energy-proud-members-container h1 {
+      font-size: 24px;
+    }
+
+    .markets-renewable-energy-proud-members-images-list {
+      flex-direction: column; /* Stack images vertically on mobile */
+      align-items: center;
+      gap: 20px; /* Spacing between images */
+    }
+
+    .markets-renewable-energy-proud-members-images-list img {
+      width: 120px; /* Adjust image size for mobile */
+      height: auto;
+    }
+  }
+</style>

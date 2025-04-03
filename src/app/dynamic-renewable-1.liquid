@@ -1,0 +1,468 @@
+<div class="markets-renewable-energy-head-head-page-bg">
+  {% render 'page-title', title: 'Renewable Energy' %}
+  <div class="markets-renewable-energy-head-head-page container-width">
+    <div class="markets-renewable-energy-head-head-header">
+      {% render 'custom-breadcrumb', paths: 'Markets, Renewable Energy', urls: '/pages/market-shop' %}
+    </div>
+
+    <div class="markets-renewable-energy-head-head-top">
+      <div class="markets-renewable-energy-head-head-top-content" id="markets-renewable-energy-head-content">
+        <!-- content -->
+      </div>
+      <div class="markets-renewable-energy-head-head-top-navigate" id="markets-renewable-energy-head-head-top-navigate">
+        <!-- content -->
+      </div>
+    </div>
+    <div class="markets-renewable-energy-head-head-bot" id="markets-renewable-energy-head-head-bot">
+      <!-- content -->
+    </div>
+
+    <div class="markets-renewable-energy-head-head-bot-content">
+      {% if section.settings.contentTwo != blank %}
+        {{ section.settings.contentTwo }}
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<style>
+  .markets-renewable-energy-head-head-page-bg {
+    background-color: white;
+    padding: 0 0 60px 0;
+  }
+
+  .markets-renewable-energy-head-head-bot-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    align-items: center;
+    color: #0d0d0d;
+  }
+
+  .markets-renewable-energy-head-head-bot-content p {
+    max-width: 821px;
+  }
+
+  .markets-renewable-energy-head-head-header-breadcrumb {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .markets-renewable-energy-head-head-header-breadcrumb a {
+    line-height: 0;
+  }
+
+  .markets-renewable-energy-head-head-page {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-sizing: border-box;
+    max-width: 1520px;
+    margin: 0 auto;
+  }
+
+  .markets-renewable-energy-head-head-header {
+    display: flex;
+    margin-bottom: 40px;
+  }
+
+  .markets-renewable-energy-head-head-header a {
+    color: #000000de;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .markets-renewable-energy-head-head-top {
+    display: flex;
+    gap: 87px;
+  }
+
+  .markets-renewable-energy-head-head-top h1 {
+    color: #0d0d0d;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 42px;
+  }
+
+  .markets-renewable-energy-head-head-top-content {
+    width: 1005px;
+    min-width: 1005px;
+  }
+
+  .markets-renewable-energy-head-head-top-content p {
+    margin-top: 16px;
+    color: #0d0d0d;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .markets-renewable-energy-head-head-top-content h1 {
+    text-align: left !important;
+  }
+
+  .markets-renewable-energy-head-head-top-content img {
+    margin-top: 32px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  /* Navigations */
+  .markets-renewable-energy-head-head-top-navigate {
+    background-color: #ebebeb;
+    padding: 0 24px 0 24px;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 488px;
+    width: 100%;
+  }
+
+  .markets-renewable-energy-head-head-top-navigate a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 8px;
+    color: #003066;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    background-color: #ebebeb;
+    padding: 16px 73px 16px 0;
+    text-decoration: none;
+    border-bottom: 1px solid #dbdbdb;
+    white-space: nowrap;
+  }
+
+  .markets-renewable-energy-head-head-top-navigate a:first-child {
+    padding: 24px 73px 16px 0;
+  }
+
+  .markets-renewable-energy-head-head-top-navigate a:hover {
+    color: #007bff;
+  }
+
+  .markets-renewable-energy-head-head-bot {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 32px;
+    gap: 8px;
+    margin-bottom: 36px;
+  }
+
+  .markets-renewable-energy-head-head-bot > * {
+    flex: 1 1 10%;
+  }
+
+  .markets-renewable-energy-head-head-bot a {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px;
+    background-color: #2c70b9;
+    max-width: 374px;
+    height: 280px;
+    padding: 106px 144px 106px 144px;
+    white-space: nowrap;
+    text-decoration: none;
+    border-radius: 4px;
+  }
+
+  .markets-renewable-energy-head-head-bot p {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    width: 280px;
+    white-space: break-spaces;
+  }
+
+  @media screen and (max-width: 1366px) {
+    .markets-renewable-energy-head-head-top {
+      gap: 60px;
+    }
+
+    .markets-renewable-energy-head-head-top-content {
+      min-width: 60%;
+    }
+  }
+
+  @media screen and (max-width: 1180px) {
+    .markets-renewable-energy-head-head-header a {
+      font-size: 16px;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .markets-renewable-energy-head-head-top {
+      flex-direction: column;
+    }
+
+    .markets-renewable-energy-head-head-top-content {
+      width: 100%;
+      min-width: unset;
+    }
+
+    .markets-renewable-energy-head-head-top-navigate {
+      height: auto;
+      padding: 16px;
+    }
+
+    .markets-renewable-energy-head-head-top-navigate a:first-child {
+      padding: 16px 32px;
+    }
+
+    .markets-renewable-energy-head-head-top-navigate a {
+      font-size: 16px;
+      padding: 16px 32px;
+      white-space: unset;
+    }
+
+    .markets-renewable-energy-head-head-bot {
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .markets-renewable-energy-head-head-bot a {
+      max-width: 100%;
+      height: auto;
+      padding: 40px 24px;
+      font-size: 16px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .markets-renewable-energy-head-head-bot-content {
+      font-size: 16px;
+    }
+
+    .markets-renewable-energy-head-head-header {
+      padding: 8px 0;
+      margin-bottom: 0;
+    }
+
+    .markets-renewable-energy-head-head-header a {
+      font-size: 16px;
+      gap: 4px;
+    }
+
+    .markets-renewable-energy-head-head-top h1 {
+      font-size: 24px;
+      line-height: 36px;
+    }
+
+    .markets-renewable-energy-head-head-top-content p {
+      font-size: 16px;
+      line-height: 20px;
+    }
+    .markets-renewable-energy-head-head-top {
+      gap: 50px;
+    }
+
+    .markets-renewable-energy-head-head-bot a {
+      font-size: 16px;
+      padding: 24px 16px;
+    }
+
+    .markets-renewable-energy-head-head-bot {
+      flex: 1 1 calc(100% - 16px);
+      gap: 20px;
+      /* Stack items vertically on smaller screens */
+      max-width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 425px) {
+    .markets-renewable-energy-head-head-top-content h1 {
+      margin-top: 0px;
+    }
+    .markets-renewable-energy-head-head-bot-content p,
+    .markets-renewable-energy-head-head-top-content p,
+    .markets-renewable-energy-head-head-top-navigate a {
+      font-size: 14px;
+    }
+
+    .navigate-link {
+      padding: 16px 0 16px 32px;
+    }
+
+    .markets-renewable-energy-head-head-header a {
+      font-size: 14px;
+    }
+
+    .markets-renewable-energy-head-head-header {
+      margin-bottom: 0;
+    }
+
+    .markets-renewable-energy-head-head-page-bg {
+      background-color: white;
+      padding: 0 0 30px 0;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Markets Renewable One",
+  "settings": [
+    {
+      "type": "text",
+      "id": "titleOne",
+      "label": "Title 1",
+      "default": "Utility"
+    },
+    {
+      "type": "richtext",
+      "id": "contentOne",
+      "label": "Content 1",
+      "default": "<p>Text here</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "contentTwo",
+      "label": "Content 2",
+      "default": "<p>Text here</p>"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "navigation",
+      "name": "Navigation Menu",
+      "settings": [
+        {
+          "type": "link_list",
+          "id": "menu",
+          "label": "Select a navigation menu"
+        }
+      ]
+    },
+    {
+      "type": "category_block",
+      "name": "Category Block",
+      "settings": [
+        { "type": "url", "id": "link", "label": "Link" },
+        { "type": "image_picker", "id": "image", "label": "Image" },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Markets Renewable One"
+    }
+  ]
+}
+{% endschema %}
+
+<script>
+  const contentContainer = document.getElementById('markets-renewable-energy-head-content');
+  contentContainer.innerHTML = `
+  <h1 class="title-section">{{ section.settings.titleOne }}</h1>
+        {% if section.settings.contentOne != blank %}
+            {{ section.settings.contentOne }}
+        {% endif %}
+  `;
+
+  const navigations = [ ]
+
+    {% for block in section.blocks %}
+    {% if block.type == 'navigation' %}
+      {% for link in linklists[block.settings.menu].links %}
+        navigations.push({
+          link: "{{ link.url }}",
+          label: "{{ link.title }}",
+        });
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+
+  const navigateContainer = document.getElementById('markets-renewable-energy-head-head-top-navigate');
+
+  navigations.forEach(item => {
+    const a = document.createElement('a');
+    a.href = item.link || '#';
+    a.className = 'navigate-link';
+
+    const img = document.createElement('img');
+    img.src = "{{ 'icon-curved-arrow.svg' | asset_url }}";
+    img.alt = "empty";
+    img.width = 24;
+    img.height = 24;
+
+    const p = document.createElement('p');
+    p.textContent = item.label;
+
+    a.appendChild(img);
+    a.appendChild(p);
+
+    if (item.link.startsWith('#')) {
+      a.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const targetId = item.link.replace('#', '');
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          const rect = targetElement.getBoundingClientRect();
+
+          const scrollPosition = rect.top + window.pageYOffset - 350; // Adjust for your header
+
+          window.scrollTo({
+            top: scrollPosition,
+            behavior: 'smooth',
+          });
+        }
+      });
+    }
+
+    navigateContainer.appendChild(a);
+  });
+
+
+const categories = [];
+
+{% for block in section.blocks %}
+    {% if block.type == 'category_block' %}
+        categories.push({
+          link: "{{ block.settings.link }}",
+          image: "{{  block.settings.image | image_url }}",
+          label: "{{  block.settings.title }}",
+        });
+    {% endif %}
+{% endfor %}
+
+  const categoryContainer = document.getElementById('markets-renewable-energy-head-head-bot');
+
+  categories.forEach(item => {
+    const a = document.createElement('a');
+    a.href = item.link || '#';
+
+    const img = document.createElement('img');
+    img.src = item.image;
+    img.alt = "empty";
+    img.width = 141.29;
+    img.height = 120;
+
+    const p = document.createElement('p');
+    p.textContent = item.label;
+
+    a.appendChild(img);
+    a.appendChild(p);
+
+    categoryContainer.appendChild(a);
+  });
+</script>
