@@ -30,7 +30,7 @@ const Home_Awards = () => {
   ];
 
   return (
-    <div className="grid gap-4 py-10 w-fit auto-rows-fr">
+    <div className="py-10 flex">
       {awards.map((card, index) => (
         <Award_Card
           key={index}

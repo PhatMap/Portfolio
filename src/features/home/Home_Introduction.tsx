@@ -5,15 +5,15 @@ import React from "react";
 
 const Home_Introduction = () => {
   return (
-    <div className="h-full flex justify-between items-center py-20">
-      <div className="w-full animate-slide-in-left">
+    <div className="h-full flex justify-between items-center py-20 gap-12">
+      <div className="animate-slide-in-left w-full">
         <div className=" mb-6  bg-gradient-to-r from-gray-700 via-gray-600 to-gray-600 w-fit px-3 py-1 rounded-full">
           <h4 className="font-semibold text-[14px] bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 bg-clip-text text-transparent animate-gradient">
             FRONT-END DEVELOPER
           </h4>
         </div>
         <h1 className="text-4xl font-bold mb-6">Tran Trung Phat</h1>
-        <p className="text-sm mb-6 max-w-[660px] leading-7">
+        <p className="text-[16px] mb-6 leading-7">
           Hi, I&apos;m Phat! A passionate front-end developer dedicated to
           crafting seamless, interactive, and visually stunning web experiences.
           I specialize in translating design concepts into reality using HTML,
@@ -66,9 +66,7 @@ const Home_Introduction = () => {
           />
         </div>
       </div>
-      <div className="w-full flex items-center justify-end animate-slide-in-right">
-        <Avatar />
-      </div>
+      <Avatar />
     </div>
   );
 };
