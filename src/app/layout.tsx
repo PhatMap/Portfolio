@@ -11,7 +11,7 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Welcome - This is Tran Trung Phat profile",
+  title: "Tran Trung Phat Portfolio",
   description: "This is my profile",
   icons: "tab-icon.png",
 };
