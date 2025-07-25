@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState, useCallback } from "react";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 
 const texts: string[] = [
   "React",
@@ -110,7 +111,7 @@ const SphereComponent: React.FC = () => {
   );
 
   useEffect(() => {
-    setItems(texts.map((text, i) => createTag(i, text, size))); 
+    setItems(texts.map((text, i) => createTag(i, text, size)));
   }, []);
 
   const next = useCallback(() => {
@@ -166,7 +167,7 @@ const SphereComponent: React.FC = () => {
     }
   }, [next]);
 
-  if (!items) return null; 
+  if (!items) return null;
 
   return (
     <div
@@ -196,10 +197,12 @@ const SphereComponent: React.FC = () => {
             transform: item.transform,
           }}
         >
-          <img
+          <Image
             src={images[item.text]}
             alt={item.text}
-            style={{ width: "24px", height: "24px", marginRight: "5px" }}
+            width={24}
+            height={24}
+            style={{ marginRight: "5px" }}
           />
           {item.text}
         </span>

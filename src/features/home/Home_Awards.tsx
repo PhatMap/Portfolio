@@ -1,5 +1,4 @@
 import Award_Card from "@/components/Award_Card";
-import React, { useEffect, useState } from "react";
 
 const Home_Awards = () => {
   const awards = [
