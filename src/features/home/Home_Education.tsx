@@ -1,52 +1,50 @@
+"use client";
+
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Home_Education = () => {
-  return (
-    <div className="flex h-fit gap-10">
-      <div className="grid grid-cols-2 gap-6">
-        <Image
-          alt="image"
-          src="/BR_0290.JPG"
-          width={600}
-          height={400}
-          className="w-full h-[300px]  object-cover rounded-xl transition-transform duration-500 hover:scale-110 cursor-pointer"
-          draggable="false"
-        />
-        <Image
-          alt="image"
-          src="/truong-2.png"
-          width={600}
-          height={400}
-          className="w-full h-[300px]  object-cover rounded-xl transition-transform duration-500 hover:scale-110 cursor-pointer"
-          draggable="false"
-        />
-        <Image
-          alt="image"
-          src="/truong-3.jpg"
-          width={600}
-          height={400}
-          className="w-full h-[300px]  object-cover rounded-xl transition-transform duration-500 hover:scale-110 cursor-pointer"
-          draggable="false"
-        />
-        <Image
-          alt="image"
-          src="/SK_0498.jpg"
-          width={600}
-          height={400}
-          className="w-full h-[300px]  object-cover rounded-xl transition-transform duration-500 hover:scale-110 cursor-pointer"
-          draggable="false"
-        />
-      </div>
-      <div className="w-[80%] flex flex-col gap-4">
-        <h1 className="text-4xl font-bold whitespace-nowrap">
-          University of Technology and Education
-        </h1>
+  const images = [
+    "/BR_0290.JPG",
+    "/truong-2.png",
+    "/truong-3.jpg",
+    "/SK_0498.jpg",
+  ];
 
+  return (
+    <div className="flex flex-wrap lg:flex-nowrap h-fit gap-10">
+      {/* Image Grid */}
+      <div className="grid grid-cols-2 gap-6 w-full lg:w-[60%]">
+        {images.map((src, index) => (
+          <Link
+            href={src}
+            target="_blank"
+            rel="noopener noreferrer"
+            key={index}
+            className="relative w-full h-[300px] rounded-xl overflow-hidden"
+          >
+            <Image
+              alt={`education-${index}`}
+              src={src}
+              fill
+              className="object-cover transition-transform duration-500 hover:scale-105 will-change-transform cursor-pointer"
+              draggable={false}
+            />
+          </Link>
+        ))}
+      </div>
+
+      {/* Education Details */}
+      <div className="w-full lg:w-[40%] flex flex-col gap-4">
+        <h1 className="text-4xl font-bold">
+          HCMC University of Technology and Education – HCMUTE
+        </h1>
         <h4>04/10/2020 - 14/06/2025</h4>
+
         <div>
-          <h5>Summary:</h5>
-          <h4>
+          <h5 className="font-semibold">Summary:</h5>
+          <p className="text-justify leading-relaxed">
             Spent almost five years studying Software Technology at the
             University of Technology and Education (HCMUTE), where I built a
             strong foundation in computer science and software engineering.
@@ -57,10 +55,22 @@ const Home_Education = () => {
             data structures, algorithms, and agile methodologies. This period
             shaped both my technical skills and my ability to work effectively
             in real-world development environments.
-          </h4>
+          </p>
         </div>
+
         <h4>Specialize: Software Technology</h4>
-        <h5>Degree: Bachelor of Technology</h5>
+        <div className="flex gap-2">
+          <h5>Degree: Bachelor of Technology</h5>
+          <Link href={""} target="_blank" rel="noopener noreferrer">
+            <Image
+              alt="open-link"
+              src="/icons8-external-link.svg"
+              width={24}
+              height={24}
+              className="duration-500 hover:scale-120 cursor-pointer"
+            ></Image>
+          </Link>
+        </div>
       </div>
     </div>
   );

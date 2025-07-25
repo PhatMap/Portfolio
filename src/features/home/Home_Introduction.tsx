@@ -29,7 +29,7 @@ const Home_Introduction = () => {
             rel="noopener noreferrer"
             className="btn-squishy bg-amber-500 px-2 py-1 rounded-[4px] font-semibold min-w-[120px] flex justify-center items-center"
           >
-            Download CV
+            Preview CV
           </Link>
           <button className="btn-squishy bg-black border border-black px-2 py-1 rounded-[4px] font-semibold min-w-[120px] flex justify-center items-center">
             Contact Me
