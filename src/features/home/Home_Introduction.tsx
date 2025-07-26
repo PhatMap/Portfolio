@@ -7,13 +7,20 @@ const Home_Introduction = () => {
   return (
     <div className="h-full flex justify-between items-center py-20 gap-12">
       <div className="animate-slide-in-left w-full">
-        <div className=" mb-6  bg-gradient-to-r from-gray-700 via-gray-600 to-gray-600 w-fit px-3 py-1 rounded-full">
-          <h4 className="font-semibold text-[14px] bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 bg-clip-text text-transparent animate-gradient">
-            FRONT-END DEVELOPER
+        <h1 id="about" className="text-4xl font-bold text-metal-gradient">
+          About me
+        </h1>
+        <br />
+        <h1 className="mt-4 text-3xl font-bold mb-6 text-gold-gradient">
+          Tran Trung Phat
+        </h1>
+        <div className="border-2 border-[#c5a243] mb-6 bg-gradient-to-r from-[#2C2C2C] via-[#3D3D3D] to-[#2C2C2C] w-fit px-4 py-1 rounded-full shadow-inner shadow-black/40">
+          <h4 className="font-semibold text-[16px] bg-gradient-to-r from-[#9F1B1B] via-[#C1272D] to-[#FF4E4E] bg-clip-text text-transparent animate-gradient">
+            Front-end Developer
           </h4>
         </div>
-        <h1 className="text-4xl font-bold mb-6">Tran Trung Phat</h1>
-        <p className="text-[16px] mb-6 leading-7">
+
+        <p className="text-[16px] font-semibold mb-6 leading-7 text-metal-gradient">
           Hi, I&apos;m Phat! A passionate front-end developer dedicated to
           crafting seamless, interactive, and visually stunning web experiences.
           I specialize in translating design concepts into reality using HTML,
@@ -24,46 +31,71 @@ const Home_Introduction = () => {
         </p>
         <div className="flex gap-4  mb-6">
           <Link
-            href={"/Tran-Trung-Phat-CV.pdf"}
+            href={"/TrungPhat-Frontend.pdf"}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-squishy bg-amber-500 px-2 py-1 rounded-[4px] font-semibold min-w-[120px] flex justify-center items-center"
+            className="btn-squishy bg-gradient-to-r from-[#C5A243] to-[#FFD700] text-black px-3 py-1.5 rounded-md font-semibold min-w-[120px] flex justify-center items-center hover:brightness-110 transition-all duration-300"
           >
             Preview CV
           </Link>
-          <button className="btn-squishy bg-black border border-black px-2 py-1 rounded-[4px] font-semibold min-w-[120px] flex justify-center items-center">
+          {/* <button className="btn-squishy bg-gradient-to-r from-[#888888] to-[#B5B5B5] text-white px-3 py-1.5 rounded-md font-semibold min-w-[120px] flex justify-center items-center hover:brightness-125 transition-all duration-300">
             Contact Me
-          </button>
+          </button> */}
         </div>
         <div className="flex items-center gap-6">
-          <Image
-            alt="image"
-            src="/icon-linkin.svg"
-            width={24}
-            height={24}
-            className="btn-squishy-jump"
-          />
-          <Image
-            alt="image"
-            src="/icon-facebook.svg"
-            width={24}
-            height={24}
-            className="btn-squishy-jump"
-          />
-          <Image
-            alt="image"
-            src="/icon-email.svg"
-            width={24}
-            height={24}
-            className="btn-squishy-jump"
-          />
-          <Image
-            alt="image"
-            src="/icon-phone.svg"
-            width={24}
-            height={24}
-            className="btn-squishy-jump"
-          />
+          <Link
+            href="https://www.linkedin.com/in/phat-tran-trung-6727b0288"
+            target="_blank"
+          >
+            <Image
+              alt="image"
+              src="/icon-linkin.svg"
+              width={24}
+              height={24}
+              className="btn-squishy-jump"
+            />
+          </Link>
+          <Link
+            href={"https://www.facebook.com/profile.php?id=61558227503586"}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              alt="image"
+              src="/icon-facebook.svg"
+              width={24}
+              height={24}
+              className="btn-squishy-jump"
+            />
+          </Link>
+
+          <Link
+            href={"mailto:trantrungphat2001@gmail.com"}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              alt="image"
+              src="/icon-email.svg"
+              width={24}
+              height={24}
+              className="btn-squishy-jump"
+            />
+          </Link>
+
+          <Link
+            href="tel:+84367562350"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              alt="image"
+              src="/icon-phone.svg"
+              width={24}
+              height={24}
+              className="btn-squishy-jump"
+            />
+          </Link>
         </div>
       </div>
       <Avatar />

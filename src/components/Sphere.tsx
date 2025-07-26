@@ -6,10 +6,8 @@ import Image from "next/image";
 
 const texts: string[] = [
   "React",
-  "GraphQL",
   "TypeScript",
-  "Prisma",
-  "Apollo",
+  "JavaScript",
   "NodeJS",
   "Express",
   "JWT",
@@ -18,21 +16,20 @@ const texts: string[] = [
   "Netlify",
   "Heroku",
   "Angular",
-  "SSR",
-  "_Lodash",
   "Python",
   "Redux",
   "REST",
   "Cloudinary",
   "Firebase",
   "SCSS",
-  "TDD",
-  "Ionic",
+  "Shopify",
+  "HTML",
 ];
 
 const images: Record<string, string> = {
   React: "/icon-react.svg",
   TypeScript: "/icon-typescript.svg",
+  JavaScript: "/icon-javascript.svg",
   NodeJS: "/icon-nodejs.svg",
   Express: "/icon-expressjs-dark.svg",
   Git: "/icon-github.svg",
@@ -45,15 +42,10 @@ const images: Record<string, string> = {
   Cloudinary: "/icon-cloudinary.svg",
   Firebase: "/icon-firebase.svg",
   REST: "/icon-rest.svg",
-  GraphQL: "/icon-graphql.svg",
-  Prisma: "/icon-prisma.svg",
-  Apollo: "/icon-apollo.svg",
   JWT: "/icon-jwt.svg",
-  SSR: "/icon-ssr.svg",
-  _Lodash: "/icon-lodash.svg",
   SCSS: "/icon-scss.svg",
-  TDD: "/icon-tdd.svg",
-  Ionic: "/icon-ionic.svg",
+  Shopify: "/icon-shopify.svg",
+  HTML: "/icon-html.svg",
 };
 
 const computePosition = (idx: number, size: number) => {

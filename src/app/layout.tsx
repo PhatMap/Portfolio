@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${roboto.variable} antialiased `}>
-        <div className="relative  h-screen overflow-y-auto ">
+        <div className="relative  h-screen overflow-y-auto flex flex-col items-center bg-gradient-to-b from-[#1a1a1a] to-[#2a2a2a] text-white">
           <Header />
           <div className="max-w-[1400px] mx-auto ">{children}</div>
         </div>

@@ -29,16 +29,21 @@ const Home_Awards = () => {
   ];
 
   return (
-    <div className="py-10 flex gap-4">
-      {awards.map((card, index) => (
-        <Award_Card
-          key={index}
-          date={card.date}
-          name={card.name}
-          description={card.description}
-          link={card.link}
-        />
-      ))}
+    <div className="pb-20">
+      <h1 id="certificates" className="text-4xl font-bold text-metal-gradient">
+        Certificates
+      </h1>
+      <div className="py-10 flex gap-4">
+        {awards.map((card, index) => (
+          <Award_Card
+            key={index}
+            date={card.date}
+            name={card.name}
+            description={card.description}
+            link={card.link}
+          />
+        ))}
+      </div>
     </div>
   );
 };
